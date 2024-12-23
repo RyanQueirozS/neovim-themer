@@ -1,0 +1,11 @@
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: themer-container
+    ports:
+      - "27015:27016"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
